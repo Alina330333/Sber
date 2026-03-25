@@ -29,3 +29,6 @@ bin/
 .DS_Store.idea/
 Figure.iml
 out/
+.idea/ 
+*.iml 
+out/ 
