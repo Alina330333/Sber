@@ -13,7 +13,7 @@ public class Main {
 
         tree.remove(5);
 
-        Iterator<Integer> iter = tree.iterator();  
+        Iterator<Integer> iter = tree.iterator();
         while (iter.hasNext()) {
             Integer value = iter.next();
             System.out.println(value);
