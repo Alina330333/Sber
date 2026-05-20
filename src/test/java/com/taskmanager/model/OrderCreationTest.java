@@ -1,12 +1,17 @@
+package com.taskmanager.model;
+
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * Тесты создания заказа.
+ * Тесты для проверки создания заказов.
  * Проверяют, что у заказа есть ID, описание и работает toString.
  */
 class OrderCreationTest {
 
+    /**
+     * Тест 1: У заказа должен быть не null ID
+     */
     @Test
     void testOrderHasId() {
         // Создаём срочный заказ
@@ -16,6 +21,9 @@ class OrderCreationTest {
         assertNotNull(order.getId());
     }
 
+    /**
+     * Тест 2: Описание заказа не должно быть null
+     */
     @Test
     void testDescriptionNotNull() {
         // Создаём заказ с описанием
@@ -25,14 +33,16 @@ class OrderCreationTest {
         assertNotNull(order.getDescription());
     }
 
+    /**
+     * Тест 3: Метод toString должен возвращать строку с информацией о заказе
+     */
     @Test
     void testToStringWorks() {
         // Создаём тестовый заказ
         Order order = new Order("Тест", false);
 
-        // Проверяем: toString() возвращает строку с информацией о заказе
+        // Проверяем: toString() не null и содержит "Order{"
         assertNotNull(order.toString());
         assertTrue(order.toString().contains("Order{"));
     }
 }
-

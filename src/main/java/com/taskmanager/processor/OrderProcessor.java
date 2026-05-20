@@ -1,3 +1,9 @@
+package com.taskmanager.processor;
+
+import com.taskmanager.consumer.Consumer;
+import com.taskmanager.model.Order;
+import com.taskmanager.producer.Producer;
+
 import java.util.concurrent.*;
 
 public class OrderProcessor {
@@ -28,8 +34,8 @@ public class OrderProcessor {
     public void start() {
         producer = new Producer(queue);
 
-        Consumer consumer1 = new Consumer(queue, processedOrders, "Consumer-1");
-        Consumer consumer2 = new Consumer(queue, processedOrders, "Consumer-2");
+        Consumer consumer1 = new Consumer(queue, processedOrders, "com.taskmanager.consumer.Consumer-1");
+        Consumer consumer2 = new Consumer(queue, processedOrders, "com.taskmanager.consumer.Consumer-2");
 
         // Отправляем задачи в пул потоков
         executor.submit(producer);

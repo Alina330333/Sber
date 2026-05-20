@@ -1,3 +1,7 @@
+package com.taskmanager.consumer;
+
+import com.taskmanager.model.Order;
+
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ConcurrentHashMap;
 

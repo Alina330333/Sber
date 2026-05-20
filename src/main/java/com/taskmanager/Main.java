@@ -1,3 +1,7 @@
+package com.taskmanager;
+
+import com.taskmanager.processor.OrderProcessor;
+
 public class Main {
 
     public static void main(String[] args) throws InterruptedException {

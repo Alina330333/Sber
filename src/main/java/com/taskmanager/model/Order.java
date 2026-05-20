@@ -1,13 +1,18 @@
+package com.taskmanager.model;
+
+import com.taskmanager.annotations.NotNull;
+import com.taskmanager.annotations.OrderType;
+
 import java.util.UUID;
 
 public class Order {
 
     // Поле id
-    @Validate(notNull = true)
+    @NotNull(notNull = true)
     private String id;
 
     // Описание заказа
-    @Validate(notNull = true)
+    @NotNull(notNull = true)
     private String description;
 
     // Тип заказа: срочный или обычный
@@ -31,7 +36,7 @@ public class Order {
 
     @Override
     public String toString() {
-        return "Order{" +
+        return "com.taskmanager.model.Order{" +
                 "id='" + id + '\'' +
                 ", description='" + description + '\'' +
                 ", type='" + type + '\'' +

@@ -1,3 +1,8 @@
+package com.taskmanager.producer;
+
+import com.taskmanager.model.Order;
+import com.taskmanager.validator.OrderValidator;
+
 import java.util.concurrent.BlockingQueue;
 
 public class Producer implements Runnable {
@@ -24,7 +29,7 @@ public class Producer implements Runnable {
                 boolean isUrgent = orderCounter % 3 == 0;
 
                 // Создаём новый заказ
-                Order order = new Order("Order #" + orderCounter, isUrgent);
+                Order order = new Order("com.taskmanager.model.Order #" + orderCounter, isUrgent);
 
                 // Валидируем заказ перед отправкой в очередь
                 if (OrderValidator.validate(order)) {
